@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Warranty Tracking System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        .header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 40px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        .welcome {
+            margin-bottom: 30px;
+        }
+
+        .welcome h1 {
+            color: #1f2937;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin: 0;
+            color: #2563eb;
+            font-size: 32px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 14px 25px;
+            margin-right: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+        .logout-btn {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        Product Warranty Tracking System
+    </div>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h1>Welcome to Dashboard</h1>
+            <p>Manage your products and track warranty information easily.</p>
+        </div>
+        
+        <a href="/logout" class="logout-btn">🚪 Logout</a>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>{{ total_products }}</h2>
+<p>Total Products</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ active_warranties }}</h2>
+<p>Active Warranties</p>
+            </div>
+
+            <div class="card">
+                <h2>{{ expired_warranties }}</h2>
+<p>Expired Warranties</p>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a href="/add-product">
+    <button>Add Product</button>
+</a>
+            <button onclick="window.location.href='/track-warranty'">
+    Track Warranty
+</button>
+            <button onclick="window.location.href='/view-products'">
+    View Products
+</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

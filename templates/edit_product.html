@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product - Warranty Tracking System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Edit Product</h1>
+
+    <form method="POST">
+
+        <label>Product Name</label>
+        <input type="text"
+               name="product_name"
+               value="{{ product['product_name'] }}"
+               required>
+
+        <label>Brand</label>
+        <input type="text"
+               name="brand"
+               value="{{ product['brand'] }}"
+               required>
+
+        <label>Purchase Date</label>
+        <input type="date"
+               name="purchase_date"
+               value="{{ product['purchase_date'] }}"
+               required>
+
+        <label>Warranty Period (Months)</label>
+        <input type="number"
+               name="warranty_period"
+               value="{{ product['warranty_period'] }}"
+               min="1"
+               required>
+
+        <button type="submit">💾 Update Product</button>
+
+    </form>
+
+    <a href="/view-products" class="back">
+        ← Back to Products
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        .header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 40px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1f2937;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        Product Warranty Tracking System
+    </div>
+
+    <div class="container">
+
+        <h1>Add New Product</h1>
+
+        <form method="POST">
+
+            <label>Product Name</label>
+            <input type="text" name="product_name" placeholder="e.g. Laptop" required>
+
+            <label>Brand</label>
+            <input type="text" name="brand" placeholder="e.g. HP" required>
+
+            <label>Purchase Date</label>
+            <input type="date" name="purchase_date" required>
+
+            <label>Warranty Period (Months)</label>
+            <input type="number" name="warranty_period" placeholder="e.g. 12" required>
+
+            <button type="submit">Save Product</button>
+            <a href="/" class="back">
+               ← Back to Dashboard
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
